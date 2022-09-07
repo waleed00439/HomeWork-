@@ -1,35 +1,38 @@
-root{
-  --bg-button: #474747;
-  --border-button: 1px solid #888;
-  --bg-hover: #ccc;
-  --bg-op: rgb(255, 186, 95);
+.App {
+  text-align: center;
 }
 
-.button{
-  font-size: 2.4em;
-  background-color: var(--bg-button);
-  border: none;
-  border-right: var(--border-button);
-  border-bottom: var(--border-button);
-  outline: none;
-  cursor: pointer;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.button:active {
-  background-color: var(--bg-hover);
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.triple {
-  grid-column: span 4;
-  font-size: 2.4em;
-  background-color: var(--bg-button);
-  border: none;
-  border-right: var(--border-button);
-  border-bottom: var(--border-button);
-  outline: none;
-  cursor: pointer;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.triple:active{
-  background-color: var(--bg-hover);
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
