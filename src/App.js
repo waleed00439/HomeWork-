@@ -1,13 +1,28 @@
-import React from 'react'
+import './App.css';
+import {useState} from 'react'
 
-import Calculator from './App.css'
+function App() {
+const[num1 , setnum1] = useState()
+const[num2 , setnum2] = useState()
+const [result, setResult]=useState()
 
-export default props => {
 
-    return (
-        <div>
-            <h1 style={{ fontSize: '35pt', marginBottom: '3rem'}}>Calculator</h1>
-            <Calculator />
-        </div>
-    )
+const AddNum =()=>{
+setResult(parseInt(num1) + parseInt(num2))
 }
+  return (
+    <div className="App">
+      <input value={num1} onChange={(e)=>{setnum1(e.target.value)}}/>
+      <input value={num2} onChange={(e)=>{setnum2(e.target.value)}}/>
+      <br></br>
+      <button onClick={AddNum}>+</button>
+      <button onClick={AddNum}>-</button>
+      <button>*</button>
+      <button>%</button>
+      <button>/</button>
+      <p>{result}</p>
+    </div>
+  );
+}
+
+export default App;
